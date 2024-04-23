@@ -1,0 +1,45 @@
+.title {
+  & img {
+    transition: all 1s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.toggle-checkbox {
+  display: none;
+}
+.toggle-label {
+  border: 2px solid #09386a;
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content-body {
+  margin: 1rem 0;
+  max-height: 1.2rem;
+  overflow: hidden;
+  box-shadow: -2px 6px 6px 2px #f7f6f6;
+  @media (max-width: 768px) {
+    max-height: 2rem;
+  }
+}
+
+.toggle-checkbox:checked + .content-body {
+  max-height: 100%;
+  box-shadow: none;
+}
+
+.content-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.content {
+  padding: 10px;
+}

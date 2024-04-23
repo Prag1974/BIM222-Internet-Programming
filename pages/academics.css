@@ -1,0 +1,35 @@
+.table-layout {
+  display: flex;
+  flex-direction: column;
+
+  & header {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-radius: 5px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+
+  /* Orta ekranlar (tabletler) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  /* Büyük ekranlar (büyük tabletler ve masaüstü) */
+  @media (min-width: 1025px) {
+    font-size: 18px;
+  }
+}
+
+td {
+  text-align: center;
+}

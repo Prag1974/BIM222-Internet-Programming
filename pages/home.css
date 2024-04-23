@@ -1,0 +1,9 @@
+.title {
+  & img {
+    transition: all 1s ease;
+    &:hover {
+      width: 6vw;
+      height: 6vw;
+    }
+  }
+}
