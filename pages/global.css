@@ -103,10 +103,10 @@ li.nav-link-el {
 
   &:hover {
     transform: translate(1rem);
-    text-decoration: underline;
 
-    & a {
-      color: blue;
+    & > a {
+      text-decoration: underline !important;
+      color: #911d0e;
     }
   }
 
@@ -118,17 +118,17 @@ li.nav-link-el {
 a {
   text-decoration: none;
   font-size: 1.2rem;
-  &.active-link {
-    text-decoration: underline;
-    font-size: 1.2rem;
-  }
+  width: 100%;
 }
 
-a.nav-link,
-a.active-link {
+a.nav-link {
   color: black;
   font-weight: bold;
   padding-left: 0rem;
+}
+a.nav-link.active-link {
+  font-size: 1.4rem;
+  text-decoration: underline;
 }
 
 .footer {
@@ -159,4 +159,27 @@ h3 {
 p {
   color: #666;
   line-height: 1.6;
+}
+
+.subheadings {
+  margin-top: 1rem;
+  display: none;
+  list-style-type: none;
+  & li {
+    opacity: 0;
+    text-align: start;
+    transition: all 0.2s ease;
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-link-el:hover a ~ .subheadings {
+  display: block;
+  & li {
+    text-decoration: none;
+    opacity: 1;
+    transition: all 0.2s ease;
+  }
 }

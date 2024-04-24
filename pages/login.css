@@ -101,17 +101,3 @@
     }
   }
 }
-
-.subheadings {
-  margin-top: 1rem;
-  display: block;
-  list-style-type: none;
-  & li {
-    opacity: 1;
-    text-align: start;
-    transition: all 0.2s ease;
-    & a {
-      text-decoration: none;
-    }
-  }
-}
